@@ -14,7 +14,7 @@ git add Readme.md
 # makes changes to readme.md
 git commit -a -m "add readme files"
 ```
-```Testing phase```
+
 
 ## Cloning
 Three ways to clone : HTTPS, SSH, GitHub CLI.
@@ -32,10 +32,21 @@ cd Github-Examples
 
 ## Commits
 
-when we want to commit code, we can write git commit which will open up the cmmit edit message in theeditor of choice 
+when we want to commit code, we can write git commit which will open up the commit edit message in the editor of choice 
 ```sh
 git commit
 ```
+Set the global editor
+```
+git config --global core.editor emacs
+```
+When you need to modify and commit Readme.md:
+```sh
+code Readme.md (//here you code/modify)
+git add Readme.md
+git commit -m "added more exclamations"
+```
+in between these steps, you can command ```git status``` to see if things happening or not.
 
 ## Branches
 
@@ -70,4 +81,31 @@ git reset
 Git status shows you what files will or will note be commited
 ```
 git status
+```
+
+## Gitconfig File
+
+The gitconfig file is what stores your gloabl configuration for git such as email, name, editor and more.
+
+Showing the contents of our .gitconfig file
+
+```sh
+git config --list
+```
+
+When you first install Git on a machine you are supposed to set up your name and email.
+
+```sh
+git config --global user.name "mahmudulJim"
+git config --global user.email "account@gmail.com"
+```
+## Log
+Git log will show recent git commits to the git tree
+
+## Push
+When we want to push a repo to our remote origin
+
+```
+git push
+
 ```
