@@ -10,10 +10,11 @@ git init
 touch readme.md
 code Readme.md
 git status
-git add .
+git add Readme.md
 # makes changes to readme.md
 git commit -a -m "add readme files"
 ```
+```Testing phase```
 
 ## Cloning
 Three ways to clone : HTTPS, SSH, GitHub CLI.
@@ -28,8 +29,14 @@ cd /workspace/temp
 git clone https://github.com/mahmudulJim/Github-Examples.git
 cd Github-Examples
 ```
+
 ## Commits
-e2bc30699bbcf29881cd82521a5bd17e78e23f34
+
+when we want to commit code, we can write git commit which will open up the cmmit edit message in theeditor of choice 
+```sh
+git commit
+```
+
 ## Branches
 
 ## Remotes
@@ -37,3 +44,30 @@ e2bc30699bbcf29881cd82521a5bd17e78e23f34
 ## Stashing
 
 ## Merging
+
+## Add
+
+When we want to stage changes that will be included in the commit, We can use the . to add all possible files
+```
+git add Readme.md
+git add .
+```
+
+## Reset
+
+Reset allows you to move staged changes to be unstaged.
+This is useful when you to revert all files not to be commited
+
+```
+git add .
+git reset
+```
+
+>git reset will revert a git add.
+
+## Status
+
+Git status shows you what files will or will note be commited
+```
+git status
+```
